@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="id.cleva.mistexample.fragment.MapFragment"
+        android:label="Mist Monitoring">
+        <action
+            android:id="@+id/action_mapFragment_to_detailMapFragment"
+            app:destination="@id/detailMapFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_mapNotifFragment"
+            app:destination="@id/mapNotifFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMapFragment"
+        android:name="id.cleva.mistexample.fragment.DetailMapFragment"
+        android:label="Live: {title}">
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapNotifFragment"
+        android:name="id.cleva.mistexample.fragment.MapNotifFragment"
+        android:label="Way Finding" />
+</navigation>
